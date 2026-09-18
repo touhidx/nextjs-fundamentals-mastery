@@ -17,6 +17,12 @@ const Navbar = () => {
       <li>
         <Link href="/showcase">showcase</Link>
       </li>
+      <li>
+        <Link href="/dashboard">dashboard</Link>
+      </li>
+      <li>
+        <Link href="/users">users</Link>
+      </li>
     </>
   );
   return (
