@@ -1,6 +1,9 @@
 import React from "react";
+interface LayoutProps {
+  children: React.ReactNode;
+}
 
-const PsotLayout = ({ children }) => {
+const PsotLayout = ({ children }: LayoutProps) => {
   return (
     <div>
       <div>fixed layout </div>

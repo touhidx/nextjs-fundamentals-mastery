@@ -1,8 +1,9 @@
 // import React from 'react
 
+import PostProps from "@/type";
 import Post from "../compnents/Post";
 
-const blogs = [
+export const blogs: PostProps[] = [
   {
     id: 1,
     title: "Understanding Eloquent Relationships in Laravel",
@@ -68,8 +69,8 @@ const BlogPage = () => {
   return (
     <div>
       <h1>our data</h1>
-      {blogs.map((post) => (
-        <Post key={post.id} post={post}></Post>
+      {blogs.map((blog) => (
+        <Post key={blog.id} blog={blog}></Post>
       ))}
     </div>
   );

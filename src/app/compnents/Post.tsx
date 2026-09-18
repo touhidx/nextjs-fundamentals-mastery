@@ -1,28 +1,28 @@
 // import React from "react";
-interface Iprop {
-  id: number;
-  title: string;
-  excerpt: string;
-  content: string;
-  category: string;
-  author: string;
-  createdAt: string;
+
+import PostProps from "@/type";
+import Link from "next/link";
+
+interface PostComponentProps {
+  blog: PostProps;
 }
-interface Iprops {
-  post: Iprop;
-}
-const Post = ({ post }: Iprops) => {
-  const { title } = post;
+
+const Post = ({ blog }: PostComponentProps) => {
+  // console.log(post);
+  const { id, title } = blog;
   return (
     <div className="card card-border bg-base-100 w-96">
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
+        <h1>{id}</h1>
         <p>
           A card component has a figure, a body part, and inside body there are
-          title and actions parts
+          title and actions parts.
         </p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <Link href={`/blogs/${id}`}>
+            <button className="btn btn-primary">show details</button>
+          </Link>
         </div>
       </div>
     </div>
